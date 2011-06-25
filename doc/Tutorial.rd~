@@ -1088,7 +1088,7 @@ Search and retrieve data from database:
 
     % br_bioflat.rb database_name identifier
 
-For example, to create an index of GenBank files gbbct*.seq and get the entry from the database:
+For example, to create index of GenBank files gbbct*.seq and get the entry from the database:
 
     % br_bioflat.rb --makeindex my_bctdb --format GenBank gbbct*.seq
     % br_bioflat.rb my_bctdb A16STM262
@@ -1175,7 +1175,7 @@ overlapping window.
 The special method Bio::Fetch.query uses the preset BioFetch server
 at bioruby.org. (The server internally gets data from GenomeNet.
 Because the KEGG/GENES database and AAindex database are not available
-from other BioFetch servers, we used the bioruby.org server with
+from other BioFetch servers, we used bioruby.org server with
 Bio::Fetch.query method.)
 
 == BioSQL
