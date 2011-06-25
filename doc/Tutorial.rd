@@ -999,6 +999,8 @@ BioRuby and other projects' members (2002).
 This tutorial only gives a quick overview of OBDA. Check out
 ((<the OBDA site|URL:http://obda.open-bio.org>)) for more extensive details.
 
+The specification is stored on CVS repository at cvs.open-bio.org, also available via http from ((<here|URL:http://cvs.open-bio.org/cgi-bin/viewcvs/viewcvs.cgi/obda-specs/?cvsroot=obf-common>)).
+
 == BioRegistry
 
 BioRegistry allows for locating retrieval methods and database
@@ -1035,8 +1037,8 @@ connection to the database is tried sequentially with the order
 written in configuration files. However, this has not (yet) been
 implemented in BioRuby.
 
-In addition, for some protocol, you must set additional options
-other than locations (e.g. user name of MySQL). In the BioRegistory
+In addition, for some protocols, you must set additional options
+other than locations (e.g. user name for MySQL). In the BioRegistory
 specification, current available protocols are:
 
   * index-flat
@@ -1073,20 +1075,20 @@ Please refer to the sections below for more information.
 
 BioFlat is a mechanism to create index files of flat files and to retrieve
 these entries fast. There are two index types. index-flat is a simple index
-performing binary search without using an external library of Ruby. index-berkeleydb
+performing binary search without using any external libraries of Ruby. index-berkeleydb
 uses Berkeley DB for indexing - but requires installing bdb on your computer,
-as well as the BDB Ruby package. For creating the index itself, you can use br_bioflat.rb command bundled with BioRuby.
+as well as the BDB Ruby package. To create the index itself, you can use br_bioflat.rb command bundled with BioRuby.
 
     % br_bioflat.rb --makeindex database_name [--format data_format] filename...
 
 The format can be omitted because BioRuby has autodetection.  If that
-does not work you can try specifying data format as the name of a BioRuby database class.
+doesn't work, you can try specifying the data format as the name of a BioRuby database class.
 
 Search and retrieve data from database:
 
     % br_bioflat.rb database_name identifier
 
-For example, to create index of GenBank files gbbct*.seq and get the entry from the database:
+For example, to create an index of GenBank files gbbct*.seq and get the entry from the database:
 
     % br_bioflat.rb --makeindex my_bctdb --format GenBank gbbct*.seq
     % br_bioflat.rb my_bctdb A16STM262
@@ -1173,7 +1175,7 @@ overlapping window.
 The special method Bio::Fetch.query uses the preset BioFetch server
 at bioruby.org. (The server internally gets data from GenomeNet.
 Because the KEGG/GENES database and AAindex database are not available
-from other BioFetch servers, we used bioruby.org server with
+from other BioFetch servers, we used the bioruby.org server with
 Bio::Fetch.query method.)
 
 == BioSQL
