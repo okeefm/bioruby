@@ -534,7 +534,7 @@ Read a ClustalW or Muscle 'ALN' alignment file:
 
 Fetch a sequence:
 
-  bioruby> seq = aln[1]
+  bioruby> seq = aln.get_sequence(1)
   bioruby> seq.definition
   ==> "gi|115023|sp|P10425|"
 
