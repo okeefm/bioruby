@@ -1399,6 +1399,18 @@ Please refer to KEGG_API.rd.ja (English version: ((<URL:http://www.genome.jp/keg
 
   * ((<URL:http://www.genome.jp/kegg/soap/>))
 
+== Comparing BioProjects
+
+For a quick functional comparison of BioRuby, BioPerl, BioPython and BioConductor (R) see ((<here|URL:http://sciruby.codeforpeople.com/sr.cgi/BioProjects>)).
+
+== Using BioPerl or BioPython from Ruby
+
+At the moment there is no easy way of accessing BioPerl from Ruby. The best way, perhaps, is to create a Perl server that gets accessed through XML/RPC or SOAP.
+
+== Using BioRuby with R
+
+Pjotr wrote a section on SciRuby. See ((<here|URL:http://sciruby.codeforpeople.com/sr.cgi/RubyWithRlang>)).
+
 == Ruby Ensembl API
 
 The Ruby Ensembl API is a Ruby API to the Ensembl database. It is NOT currently
@@ -1427,10 +1439,6 @@ Gene Ontologies can be fetched through the Ruby Ensembl API package:
 Prints each mosq. accession/uniq identifier and the GO terms from the Drosphila
 homologues.
 
-== Using BioPerl or BioPython from Ruby
-
-At the moment there is no easy way of accessing BioPerl from Ruby. The best way, perhaps, is to create a Perl server that gets accessed through XML/RPC or SOAP.
-
 == Installing required external libraries
 
 At this point for using BioRuby no additional libraries are needed, except if
@@ -1446,7 +1454,7 @@ carefully that come with each package.
 
 === Installing libxml-ruby
 
-The simplest way is to use gem packaging system:
+The simplest way is to use the RubyGems packaging system:
 
   gem install -r libxml-ruby
 
@@ -1454,7 +1462,7 @@ If you get `require': no such file to load - mkmf (LoadError) error then do
 
   sudo apt-get install ruby-dev
 
-If you have other problems with installation, then see ((<URL:http://libxml.rubyforge.org/install.xml>))  
+If you have other problems with installation, then see ((<URL:http://libxml.rubyforge.org/install.xml>)).
 
 == Trouble shooting
 
