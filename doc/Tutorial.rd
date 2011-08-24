@@ -30,7 +30,7 @@
 #
 #
 
-bioruby> $: << '../lib'
+bioruby> $: << '../lib'  # make sure rubydoctest finds bioruby/lib
 
 =begin
 #doctest Testing bioruby
@@ -43,14 +43,14 @@ bioruby> $: << '../lib'
 This document was last modified: 2011/03/24
 Current editor: Michael O'Keefe <okeefm (at) rpi (dot) edu>
 
-The latest version resides in the GIT source code repository:  ./doc/((<Tutorial.rd|URL:http://github.com/bioruby/bioruby/doc/Tutorial.rd>)).
+The latest version resides in the GIT source code repository:  ./doc/((<Tutorial.rd|URL:https://github.com/bioruby/bioruby/blob/master/doc/Tutorial.rd>)).
 
 == Introduction
 
 This is a tutorial for using Bioruby. A basic knowledge of Ruby is required.
-If you want to know more about the programming langauge Ruby we recommend the
+If you want to know more about the programming language, we recommend the
 latest Ruby book ((<Programming Ruby|URL:http://www.pragprog.com/titles/ruby>))
-by Dave Thomas and Andy Hunt - the first edition is online
+by Dave Thomas and Andy Hunt - the first edition can be read online
 ((<here|URL:http://www.ruby-doc.org/docs/ProgrammingRuby/>)).
 
 For BioRuby you need to install Ruby and the BioRuby package on your computer
@@ -85,8 +85,11 @@ documentation can be viewed online at
 
 Bioruby comes with its own shell. After unpacking the sources run one of the following commands:
 
-  ./bin/bioruby
-or
+  bioruby
+
+or, from the source tree
+
+  cd bioruby
   ruby -I lib bin/bioruby
 
 and you should see a prompt
@@ -999,8 +1002,6 @@ BioRuby and other projects' members (2002).
 This tutorial only gives a quick overview of OBDA. Check out
 ((<the OBDA site|URL:http://obda.open-bio.org>)) for more extensive details.
 
-The specification is stored on CVS repository at cvs.open-bio.org, also available via http from ((<here|URL:http://cvs.open-bio.org/cgi-bin/viewcvs/viewcvs.cgi/obda-specs/?cvsroot=obf-common>)).
-
 == BioRegistry
 
 BioRegistry allows for locating retrieval methods and database
@@ -1438,6 +1439,10 @@ Gene Ontologies can be fetched through the Ruby Ensembl API package:
 
 Prints each mosq. accession/uniq identifier and the GO terms from the Drosphila
 homologues.
+
+== Using BioPerl or BioPython from Ruby
+
+At the moment there is no easy way of accessing BioPerl from Ruby. The best way, perhaps, is to create a Perl server that gets accessed through XML/RPC or SOAP.
 
 == Installing required external libraries
 
